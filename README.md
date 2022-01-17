@@ -1,10 +1,9 @@
-#Instructions from Shopify
-# Getting Started with Create React App
 
+# Instructions from Shopify
 
 For the purposes of this project, Shopify is extending our mission to Make Commerce Better for Everyone to include the whole entire universe. Please build us an app to help share photos from one of NASA’s image APIs.
 
-##The Challenge
+## The Challenge
 
 We need a webpage that can pull images, and allow the user to “like” and “unlike” their favorite images.
 
