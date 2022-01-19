@@ -9,7 +9,7 @@ const HeroArea: React.FC = () => {
 
     useEffect(() => {
         setTimeout(() => setWelcome(true), 1000);
-        setTimeout(() => setSpacestagram(true), 2500);
+        setTimeout(() => setSpacestagram(true), 1500);
     },[])
     
     return (
