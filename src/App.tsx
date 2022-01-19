@@ -65,7 +65,7 @@ function App() {
     <div className="App d-flex flex-column">
       <NavBar filter={filter} setFilter={setFilter} />
       <HeroArea />
-      <h1 style={{fontSize: '2rem'}} className="mt-3"><strong>FEED</strong></h1>
+      <h1 style={{fontSize: '2rem'}} className="mt-3"><strong>ᠻꫀꫀᦔ</strong></h1>
       <hr className="m-0 align-self-center" style={{width: "80%", borderTop: "3px solid #bbb"}}></hr>
       {isLoading ?
         <CircularProgress className="mt-2 align-self-center" />
@@ -74,46 +74,44 @@ function App() {
           <ImageList className="mt-3" variant="masonry" cols={gridColumns} gap={8}>
             {displayedImages.map((image: any, index: number) => {
               return (
-                <Animated key={image.href} animationIn="pulse" animationInDuration={1000} animationOut="fadeOut" isVisible={true}>
-                  <ImageListItem>
-                    <Card>
-                      <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          style={{
-                            backgroundPosition: "center center",
-                            backgroundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                          }}
-                          image={image.links[0].href}
-                          alt="green iguana"
-                        />
-                        <CardContent className="d-flex flex-column">
-                          <Typography gutterBottom variant="h5" component="div">
-                            {image.data[0].title}
-                          </Typography>
-                          <Typography variant="body1" component="div">
-                            Date: {image.data[0].date_created?.split("T")[0] || "N/A"}
-                          </Typography>
-                          <Typography variant="body1" component="div">
-                            Location: {image.data[0].location || "N/A"}
-                          </Typography>
-                          <Typography gutterBottom variant="body1" component="div">
-                            Photographer: {image.data[0].photographer || "N/A"}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary">
-                            {image.data[0].description}
-                          </Typography>
-                        </CardContent>
-                        <CardActions disableSpacing>
-                          <IconButton className={"like-button " + ((filter==='likes' || likedIndeces.includes(index)) ? "liked" : "")} onClick={(e) => handleLike(e, index)} aria-label="add to favorites">
-                            {/* <button className={"like-button" + (likedIndeces.includes(index)? "liked" : "")}></button> */}
-                          </IconButton>
-                        </CardActions>
-                      </CardActionArea>
-                    </Card>
-                  </ImageListItem>
-                </Animated>
+                <ImageListItem>
+                  <Card>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        style={{
+                          backgroundPosition: "center center",
+                          backgroundRepeat: "no-repeat",
+                          backgroundSize: "cover",
+                        }}
+                        image={image.links[0].href}
+                        alt="green iguana"
+                      />
+                      <CardContent className="d-flex flex-column">
+                        <Typography gutterBottom variant="h5" component="div">
+                          {image.data[0].title}
+                        </Typography>
+                        <Typography variant="body1" component="div">
+                          Date: {image.data[0].date_created?.split("T")[0] || "N/A"}
+                        </Typography>
+                        <Typography variant="body1" component="div">
+                          Location: {image.data[0].location || "N/A"}
+                        </Typography>
+                        <Typography gutterBottom variant="body1" component="div">
+                          Photographer: {image.data[0].photographer || "N/A"}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {image.data[0].description}
+                        </Typography>
+                      </CardContent>
+                      <CardActions disableSpacing>
+                        <IconButton className={"like-button " + ((filter==='likes' || likedIndeces.includes(index)) ? "liked" : "")} onClick={(e) => handleLike(e, index)} aria-label="add to favorites">
+                          {/* <button className={"like-button" + (likedIndeces.includes(index)? "liked" : "")}></button> */}
+                        </IconButton>
+                      </CardActions>
+                    </CardActionArea>
+                  </Card>
+                </ImageListItem>
               )
             })}
           </ImageList>

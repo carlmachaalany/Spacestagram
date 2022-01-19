@@ -46,7 +46,7 @@ const NavBar: React.FC<Props> = ({filter, setFilter}) => {
                     noWrap
                     component="div"
                 >
-                    <strong id="spacestagram">SPACESTAGRAM</strong>
+                    <strong id="spacestagram">ડρꪖᥴꫀડ𝕥ꪖᧁ𝕣ꪖꪑ</strong>
                 </Typography>
                 <Animated animationIn="bounceInRight" animationInDuration={1500} animationOut="fadeOut" isVisible={true}><StarIcon1 fontSize='medium'/></Animated>
             </div>
@@ -59,8 +59,8 @@ const NavBar: React.FC<Props> = ({filter, setFilter}) => {
                 displayEmpty
                 inputProps={{ 'aria-label': 'Without label' }}
                 >
-                    <MenuItem className="filter-item" value={'all'}>All</MenuItem>
-                    <MenuItem value={'likes'}>Likes</MenuItem>
+                    <MenuItem className="filter-item" value={'all'}>𝓐𝓵𝓵</MenuItem>
+                    <MenuItem value={'likes'}>𝓛𝓲𝓴𝓮𝓼</MenuItem>
                 </Select>
             </FormControl>
         </Toolbar>
