@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+Deployed Link: https://carlmachaalany.github.io/spacestagram
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Instructions from Shopify
 
-## Available Scripts
+For the purposes of this project, Shopify is extending our mission to Make Commerce Better for Everyone to include the whole entire universe. Please build us an app to help share photos from one of NASA’s image APIs.
 
-In the project directory, you can run:
+## The Challenge
 
-### `npm start`
+We need a webpage that can pull images, and allow the user to “like” and “unlike” their favorite images.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+We'd like a simple to use interface that makes it easy to:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Fetch data from one of NASA’s APIs and display the resulting images (more details under Technical Requirements)
+Display descriptive data for each image (for example: title, date, description, etc.)
+Like an image
+Unlike an image
+Technical Requirements
 
-### `npm test`
+Search results should come from NASA’s free APIs, for which you’ll need a free API key from https://api.nasa.gov - you do not need to enter anything more than your first name, last name, and email address (i.e. application url is not required)
+We’ve provided screenshots below of demo apps we built using the Astronomy Picture of the Day or Mars Rover Photos APIs (along with Shopify’s open source React component library: Polaris).
+You are free to use any NASA API you like
+You are free to use any front end framework/component library you like (or none at all!)
+Each image result should list at least a title, date of capture (ideally in earth_date) and a button to “like” that image.
+Each image can be “liked”, and a user should be able to undo their “like”
+The HTML that ends up being served client-side should be accessible and semantic (MDN reference)
+Extras
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There is a lot to be improved on here, you can polish the required features by crafting a nicer design, or improve the app by adding new features! Choose something that you feel best showcases your passion and skills.
 
-### `npm run build`
+If you need inspiration, here are examples of what you can work on. If you work on these ideas, we recommend choosing only one or two.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Save likes if the user leaves or reloads the page
+Animate the “like” action (might we suggest a heart?)
+Add a loading state while we wait for NASA’s API to return data
+Create shareable links for each image
+Add a date-picker to be able to browse photos starting from a specific date
+Submission
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Please submit your application via “Apply Now” and make sure you include:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+A link to your hosted code so we can test it (Free hosting available via: CodeSandbox, Github pages, Netlify and Heroku)
+A link to your Github repository containing the code
+Any other notes you'd like us to consider alongside the page
