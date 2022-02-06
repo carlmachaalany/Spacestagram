@@ -1,5 +1,5 @@
 .App {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Comic Neue', cursive;  
   background-color: #fff;
   text-align: center;
   height: 100vh;
@@ -9,14 +9,14 @@
 3. Hero Area
 ========================================================================== */
 #hero-area {
-  background-image: url(./assets/space-background2.jpg);
+  background-image: url(./assets/space.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
   position: relative;
   overflow: hidden;
-  padding: 100px 0 0 0; }
+  padding: 50px 0 0 0; }
 
 /* ==========================================================================
   ========================================================================== */
@@ -68,4 +68,22 @@
   .navbar-toolbar {
     width: 100%;
   }
+}
+
+/* Scroll To Top Button */
+#scrollToTopWrapper {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#scrollToTopButton {
+  background-color: rgb(16, 17, 56);
+  border-radius: 20px;
+}
+
+.navbar-bg {
+  background-image: url(./assets/navbar_background.png);
+  background-position: center bottom;
+  background-size: cover;
 }
