@@ -5,7 +5,6 @@ const HeroArea: React.FC = () => {
 
     const [welcome, setWelcome] = useState<boolean>(false);
     const [spacestagram, setSpacestagram] = useState<boolean>(false);
-    
 
     useEffect(() => {
         setTimeout(() => setWelcome(true), 1000);

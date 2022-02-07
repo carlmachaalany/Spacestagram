@@ -7,11 +7,6 @@ import { Image } from './dtos/image';
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, CircularProgress, IconButton, ImageList, ImageListItem, Typography } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import {Animated} from 'react-animated-css';
-// import ReactPlaceholder from 'react-placeholder';
-// import { TextBlock, RectShape } from 'react-placeholder/lib/placeholders';
-// import "react-placeholder/lib/reactPlaceholder.css";
-// import 'react-loading-skeleton/dist/skeleton.css';
-// import Skeleton from '@mui/material/Skeleton';
 
 function App() {
 
@@ -29,12 +24,9 @@ function App() {
   const [gridColumns, setGridColumns] = useState(getGridColumns());
   
   const handleChangeFilter = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      document.body.scrollTop = document.documentElement.scrollTop = 0;
-      setDisplayedImages(filter === 'all' ? allImages : allImages.filter((image, index) => likedIndeces.includes(index)))
-      setIsLoading(false);
-    }, 600);
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    setDisplayedImages(filter === 'all' ? allImages : allImages.filter((image, index) => likedIndeces.includes(index)));
+    setTimeout(() => setIsLoading(false), 600);
   }
 
   useEffect(() => {
@@ -46,6 +38,7 @@ function App() {
         let allImages = lis.collection.items.map((image: any) => { return {...image, liked: false}});
         setAllImages(allImages);
         setDisplayedImages(allImages);
+        setIsLoading(false);
       });
     });
 
@@ -66,6 +59,7 @@ function App() {
   }, []);
 
   useEffect(() => {
+    setIsLoading(true);
     handleChangeFilter();
   }, [filter]);
 
@@ -84,13 +78,6 @@ function App() {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   }
-
-  // const GhostPlaceholder = () => (
-  //   <div className='my-placeholder'>
-  //     <RectShape color='gray' style={{width: 25, height: 100}} />
-  //     <TextBlock rows={6} color='blue'/>
-  //   </div>
-  // );
   
   return (
     <>
@@ -106,7 +93,6 @@ function App() {
         <ImageList className="mt-3" variant="masonry" cols={gridColumns} gap={8}>
           {displayedImages.map((image: any, index: number) => {
             return (
-              // <ReactPlaceholder type='textRow' rows={8} ready={!isLoading}>
               <ImageListItem key={index}>
                 <Card>
                   <CardActionArea>
@@ -139,13 +125,11 @@ function App() {
                     </CardContent>
                     <CardActions disableSpacing>
                       <IconButton className={"like-button " + ((filter==='likes' || likedIndeces.includes(index)) ? "liked" : "")} onClick={(e) => handleLike(e, index)} aria-label="add to favorites">
-                        {/* <button className={"like-button" + (likedIndeces.includes(index)? "liked" : "")}></button> */}
                       </IconButton>
                     </CardActions>
                   </CardActionArea>
                 </Card>
               </ImageListItem>
-              // </ReactPlaceholder>
             )
           })}
         </ImageList>
